@@ -1,0 +1,485 @@
+.app {
+  display: flex;
+  justify-content: center;
+
+  .container {
+    background-color: #d6efd8;
+    background-image: url("https://www.transparenttextures.com/patterns/green-dust-and-scratches.png");
+
+    //COMMON CLASSES
+
+    .link {
+      text-decoration: none;
+      color: inherit;
+      color: white;
+
+      h6 {
+        font-weight: normal;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      h1 {
+        text-decoration: none;
+      }
+    }
+
+    button {
+      display: flex;
+      width: max-content;
+      border: none;
+      background-color: white;
+      color: #1a5319;
+      padding: 5px;
+      margin: 0;
+      cursor: pointer;
+      border: 1px solid #80af81;
+      margin-bottom: 10px;
+    }
+
+    button:hover {
+      color: white;
+      background-color: #80af81;
+    }
+
+    //LOGIN And REGISTRATION
+
+    .auth {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      justify-content: center;
+
+      h2 {
+        text-align: center;
+        color: #1a5319;
+        margin-bottom: 30px;
+      }
+
+      .login {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        padding: 50px;
+
+        input {
+          border: none;
+          border-bottom: 1px solid #508d4e;
+        }
+
+        button {
+          background-color: #508d4e;
+          color: white;
+          cursor: pointer;
+          border: none;
+          border: solid 1px white;
+        }
+
+        button:hover {
+          background-color: #d6efd8;
+          color: #508d4e;
+          border: solid 1px #508d4e;
+        }
+
+        p {
+          color: red;
+          text-align: center;
+        }
+      }
+    }
+
+    //NAVBAR
+    .navbar {
+      .container {
+        padding: 10px 10px;
+        background-color: #80af81;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+          img {
+            width: 120px;
+          }
+        }
+
+        .links {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+          margin: 0;
+          padding: 0;
+
+          .profile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 100;
+            font-size: large;
+            margin-left: 10px;
+          }
+
+          .write {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            text-decoration: none;
+            color: #1a5319;
+          }
+
+          .write:hover {
+            background-color: #d6efd8;
+            border: solid 1px white;
+          }
+        }
+      }
+    }
+
+    //FOOTER
+
+    .footer {
+      margin-top: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+
+      .container {
+        background-color: #80af81;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: 10px;
+        font-size: 16px;
+        font-weight: bold;
+
+        img {
+          height: 40px;
+        }
+
+        span {
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+
+    //HOME PAGE
+
+    .home {
+      display: flex;
+      justify-content: center;
+      margin-top: 100px;
+
+      .posts {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        width: 90%;
+
+        .post {
+          display: flex;
+          justify-content: space-between;
+          gap: 50px;
+
+          &:nth-child(2n + 1) {
+            flex-direction: row-reverse;
+          }
+
+          .image {
+            flex: 0 0 40%;
+            overflow: hidden;
+            box-shadow: 5px -5px 0 #1a5319;
+            border-radius: 5px;
+
+            img {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+              border-radius: 5px;
+            }
+
+            img:hover {
+              opacity: 0.8;
+              cursor: pointer;
+            }
+          }
+
+          .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 30px;
+
+            .title {
+              margin-bottom: 20px;
+              text-decoration: none;
+              color: #1a5319;
+              font-size: 3rem;
+            }
+
+            .title:hover {
+              color: #80af81;
+            }
+
+            button {
+              display: flex;
+              width: max-content;
+              border: none;
+              background-color: white;
+              color: #1a5319;
+              padding: 10px;
+              margin: 0;
+              cursor: pointer;
+              border: 1px solid #80af81;
+              margin-bottom: 10px;
+            }
+
+            button:hover {
+              color: white;
+              background-color: #80af81;
+            }
+          }
+        }
+      }
+    }
+
+    //POST PAGE //SINGLE POST
+
+    .post {
+      display: flex;
+      align-items: center;
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 95%;
+        gap: 30px;
+
+        .postcontainer {
+          display: flex;
+          flex-direction: column;
+          width: 65%;
+
+          .title {
+            font-size: 3rem;
+            margin: 50px 0;
+          }
+
+          .contentbox {
+            display: flex;
+            flex-direction: column;
+            line-height: 40px;
+            gap: 50px;
+
+            .author {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              gap: 10px;
+
+              .profile {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                margin-right: 20px;
+                padding: 0%;
+                margin: 0;
+
+                .name {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  justify-content: space-around;
+                  gap: 30px;
+                }
+
+                p {
+                  display: flex;
+                  text-align: center;
+                  justify-content: center;
+                  margin-top: 15px;
+                  font-weight: 300;
+                }
+              }
+            }
+
+            .img {
+              display: flex;
+
+              img {
+                height: 300px;
+                width: 100%;
+                object-fit: cover;
+              }
+            }
+          }
+        }
+
+        .menucontainer {
+          display: flex;
+          width: 30%;
+        }
+      }
+    }
+
+    //MENU ON SINGLE POST PAGE
+
+    .Menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      margin-top: 50px;
+
+      h1 {
+        font-size: 30px;
+        text-align: left;
+        color: #508d4e;
+        text-decoration: none;
+      }
+
+      .Menuposts {
+        .posts {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+          }
+
+          .LinkPost {
+            h1 {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+
+    //WRITE PAGE
+
+    .add {
+      display: flex;
+      justify-content: center;
+
+      .addcontainer {
+        margin-top: 50px;
+        width: 90%;
+        display: flex;
+        gap: 40px;
+
+        .writearea {
+          width: 80%;
+
+          .title {
+            width: 100%;
+            border: solid 1px #508d4e;
+            margin-bottom: 10px;
+          }
+
+          .editorcontainer {
+            height: 300px;
+            background-color: white;
+            overflow: none;
+            border: solid 1px #508d4e;
+
+            .editor {
+              width: 100%;
+              height: 100%;
+              overflow: scroll;
+            }
+          }
+        }
+
+        .menuarea {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 20%;
+          gap: 20px;
+
+          .item {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            width: 100%;
+            border: solid 1px #508d4e;
+            font-size: 14px;
+            padding: 15px;
+
+            .buttons {
+              display: flex;
+              justify-content: space-between;
+              margin-top: 10px;
+
+              :last-child {
+                background-color: #508d4e;
+                color: white;
+              }
+
+              :last-child:hover {
+                background-color: white;
+                color: #508d4e;
+              }
+            }
+
+            h1 {
+              font-size: 20px;
+              color: #508d4e;
+            }
+
+            .cat {
+              font-size: 14px;
+              display: flex;
+              align-items: center;
+              gap: 2px;
+              color: #508d4e;
+            }
+          }
+        }
+      }
+    }
+
+    //ABOUT PAGE
+
+    .about {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        line-height: 40px;
+
+        .address {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-top: 100px;
+        }
+      }
+    }
+  }
+}
